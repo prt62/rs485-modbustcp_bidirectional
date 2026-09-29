@@ -301,8 +301,10 @@
 // provides begin() -> EthernetServer is abstract; this wrapper fixes that.
 // Core 3.x: Server::begin() matches the Ethernet lib already, so the wrapper
 // must NOT override anything (an `override` there is a compile error).
-#include "esp_arduino_version.h"
-#ifndef ESP_ARDUINO_VERSION_MAJOR
+//updated on Git
+
+#include "esp_arduino_version.h" 
+#ifndef ESP_ARDUINO_VERSION_MAJOR 
 #define ESP_ARDUINO_VERSION_MAJOR 2
 #endif
 class CustomEthernetServer : public EthernetServer {
@@ -316,7 +318,7 @@ class CustomEthernetServer : public EthernetServer {
 // ==========================================================================
 // 2. PIN DEFINITIONS & TUNABLES
 // ==========================================================================
-#define FW_VERSION "3.5.0"
+#define FW_VERSION "3.5.1"
 
 // W5500 Ethernet
 #define W5500_MOSI 23
